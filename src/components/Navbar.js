@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
+import {NavbarLink} from '../Constants/NavbarLink'
 import SearchIcon from '@mui/icons-material/Search';
 import fantasy from '../BooksData/fantasy.json'
-import SingleBook from './SingleBook';
 const Navbar = () => {
     const [serchTest, setSerchTest] = useState('')
     const [result, setResult] = useState([])
@@ -25,16 +26,24 @@ const Navbar = () => {
 
     return (
         <div className='relative  w-screen'>
-            <div className='flex flex-row bg-pink-100 justify-between p-2'>
+            <div className='flex flex-row  bg-[#ff0099] justify-between p-2'>
+                { NavbarLink.map((page, index)=>{
 
-                <h1>Home</h1>
-                <h1>About</h1>
-                <h1>Brouse</h1>
+                    return(
+                        <ul>
+                        <Link key={index} to={page.link}>
+                            <li>{page.title}</li>
+                        </Link>
+                        </ul>
+
+                    )
+                } )}
 
 
                 <div>
                     <input
                         type='text'
+                        placeholder='Search your book'
                         onChange={(e) => setSerchTest(e.target.value)}
                     ></input>
                     <button onClick={() => [

@@ -1,9 +1,15 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
 import BookList from '../components/BookList'
-
+import Footer from '../components/Footer'
 const Home = () => {
   return (
-    <div><BookList/></div>
+    <div>
+        <Navbar/>
+        <BookList/>
+        <Footer/>
+        
+    </div>
   )
 }
 
