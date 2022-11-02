@@ -21,7 +21,7 @@ const ModalCommentList = ({ book }) => {
               {comment.comment}
             </div>
             <div>
-              {comment.createdAt.slice(0, 10)}
+              {comment.createdAt.slice(0, 24)}
             </div>
           </div>
         )

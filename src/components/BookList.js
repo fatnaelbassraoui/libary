@@ -5,10 +5,10 @@ import SingleBook from './SingleBook';
 const BookList = () => {
   
   return (
-    <div className='container mx-4  '>
+    <div className='container flex items-center '>
     <div
-    className='flex flex-wrap justify-center gap-2 p-2 ml-6 '>
-        {fantasy.slice(0,20).map((book,index)=>{
+    className='flex flex-wrap justify-center gap-8 p-2  '>
+        {fantasy.slice(0,24).map((book,index)=>{
             return(
                
                 <SingleBook
