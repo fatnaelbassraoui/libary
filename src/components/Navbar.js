@@ -27,17 +27,17 @@ const Navbar = () => {
 
     return (
         <nav>
-            <div className='flex  bg-white justify-between pt-2'>
-            <div className="mr-2 flex ">
-                        <img src={Logo} width={100} alt="img" />
-                                       
+            <div className='flex  bg-white justify-between item-center p-2'>
+                <div className="mr-2 flex ">
+                    <img src={Logo} width={100} alt="img" />
+
                     <h3
                         className=' text-black italic font-bold pt-4 '>
                         Faty Book Store
                     </h3>
-                    </div>
-                   
-               
+                </div>
+
+
                 <div className='flex flex-row justify-between content-center w-[400px] pt-4 '>
                     {NavbarLink.map((page, index) => {
                         return (
@@ -56,37 +56,37 @@ const Navbar = () => {
                     })}
                 </div>
 
-                <div>
+                <div className='mr-2 flex item-center'>
                     <input
-                        className='p-4 ml-2 text-slate-500 pt-4'
+                        className=' text-slate-500 '
                         type='text'
                         placeholder='Search your book'
                         onChange={(e) => setSerchTest(e.target.value)}
                     ></input>
-                    <button 
-                    className='rounded bg-purple-400 mr-2'
-                    onClick={() => [
-                        filterBooks(fantasy, serchTest),
-                        setModalSearchTest(true)
-                    ]}><SearchIcon /></button>
+                    <button
+                        className='rounded bg-purple-400 mr-2'
+                        onClick={() => [
+                            filterBooks(fantasy, serchTest),
+                            setModalSearchTest(true)
+                        ]}><SearchIcon /></button>
                 </div>
 
             </div>
             {result.length > 0 && modalSearchTest && (
-                <div className='absolute top-12 right-6 w-[350px] bg-purple-50 z-10 flex flex-col justify-center rounded '>
+                <div className='absolute top-18 right-6 w-[350px] bg-purple-50 z-10 flex flex-col justify-center rounded '>
                     <div className='flex justify-end text-xl cursor-pointer' onClick={() => setModalSearchTest(false)}>
                         &times;
                     </div>
                     <ul>
                         {result && result?.map((book) => {
                             return (
-                                <div>
+                                <div className='p-2 '>
                                     <li
                                         key={book.asin}>
                                         {book.title}
                                     </li>
-                                    <span 
-                                    className='bg-purple-500 rounded-lg pr-1 pl-1 text-white text-md'>
+                                    <span
+                                        className='bg-purple-500 rounded-lg pr-1 pl-1 text-white text-md'>
                                         {book.asin}
                                     </span>
                                 </div>

@@ -23,14 +23,14 @@ const SingleBook = ({ book }) => {
         className={selectedCard ? ' drop-shadow-2xl hue-rotate-15' : 'border-stone-200'}>
         {/* <img src={book.img} alt="copertina" className='w-[200px] h-[200px]' /> */}
       </div>
-      <div className='absolute bottom-2 bg-purple-900/[.7] text-white  text-xs rounded-lg mx-2 '>
+      <div className='absolute bottom-2 bg-purple-900/[.7] text-white  text-xs rounded-lg mx-2 px-2'>
         <h3 className='font-bold'>
           {book.title}
         </h3>
       </div>
       <div className='flex justify-center'>
         <button
-        className=' text-xs m-auto mt-2 mb-2 absolute top-1 right-1 p-2 rounded-[50%] bg-purple-800 text-white'
+        className=' text-xs m-auto mt-2 mb-2 absolute top-1 right-1 p-2 rounded-[50%] bg-purple-800 text-white hover:bg-purple-300'
           onClick={() => setModalCommentArea(true)}
         >
           <InsertCommentIcon/>

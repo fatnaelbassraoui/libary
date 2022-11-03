@@ -38,7 +38,10 @@ const ModalAddComments = ({ book }) => {
   }
   return (
     <div className='flex flex-col justify-center items-center mx-auto'>
-      <form onSubmit={postComment}>
+      <form 
+      className='flex flex-col'
+      onSubmit={postComment}>
+        <div className='flex flex-col mx-auto'>
         <input
           className='mb-2 p-2 w-fit '
           type="text"
@@ -72,6 +75,8 @@ const ModalAddComments = ({ book }) => {
             5
           </option>
         </select>
+        </div>
+        <div>
         <button
           className='rounded-xl bg-purple-500 text-sm text-white w-[100px] '
           type='submit'
@@ -81,6 +86,7 @@ const ModalAddComments = ({ book }) => {
         >
           Add comment
         </button>
+        </div>
       </form>
     </div>
   )
