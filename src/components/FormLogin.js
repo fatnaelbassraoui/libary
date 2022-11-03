@@ -23,15 +23,15 @@ const FormModalLogin = () => {
    }
     return (
     <>
-            <div className="container m-auto flex flex-col justify-center">
-                <div className='mt-20 text-xl font-bold p-4  w-fit'>
+            <div className="container m-auto flex flex-col justify-center ml-16">
+                <div className='mt-20 text-white text-xl font-bold p-4  w-fit'>
                     <h1>
                         Please login to your account
                     </h1>
                 </div>
                 <div className='flex flex-col w-fit p-4 '>
                 <input
-                        className="p-2 rounded-lg mb-2"
+                        className="p-2 rounded-lg mb-8"
                         type="text"
                         placeholder="userName"
                         onChange={(e) =>
@@ -42,7 +42,7 @@ const FormModalLogin = () => {
                         }
                     ></input>
                     <input
-                        className="p-2 rounded-lg mb-2"
+                        className="p-2 rounded-lg mb-8"
                         type="email"
                         placeholder="e-mail"
                         onChange={(e) =>
@@ -54,7 +54,7 @@ const FormModalLogin = () => {
                     ></input>
                 
                     <input
-                        className="p-2 rounded-lg mb-2"
+                        className="p-2 rounded-lg mb-4"
                         type="password"
                         placeholder="password"
                         onChange={(e) =>
