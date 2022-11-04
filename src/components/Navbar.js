@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { NavbarLink } from '../Constants/NavbarLink'
 import SearchIcon from '@mui/icons-material/Search';
 import fantasy from '../BooksData/fantasy.json'
-import Logo from '../Assets/Logo-books..jpg'
+import Logo from '../Assets/Logo-books.jpg'
 const Navbar = () => {
     const [serchTest, setSerchTest] = useState('')
     const [result, setResult] = useState([])

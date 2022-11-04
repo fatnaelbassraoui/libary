@@ -5,40 +5,37 @@ import Footer from '../components/Footer'
 import imgLogin from '../Assets/sign-page.webp'
 
 
-
-
 const Login = () => {
     return (
-        <div>
-
-            <Navbar />
+        <div className='container mx-auto'>
+            <Navbar/>
             <div
-                className='container flex  w-screen'
+                className='container flex justify-center items-center w-screen'
             >
                 <div
                     className=" w-[100%] ">
                     <div
-                    className='h-[900px]'
-                         style={{
-                            backgroundImage:`url("${imgLogin}")`,
-                            backgroundSize:'cover',
-                            backgroundRepeat:'no-repeat',
-                            backgroundPosition:'center'
+                        className='h-[900px]'
+                        style={{
+                            backgroundImage: `url("${imgLogin}")`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'
                         }}
                     >
-                        
+
                     </div>
 
                 </div>
-                <div className=" w-[100%] h-[900px] flex justify-center items-center flex-wrap g-6 text-gray-800 ">
-                    <div 
-                    className='w-[50%] flex justify-center'
+                <div className=" w-full h-screen flex justify-center items-center flex-wrap g-6 text-gray-800 ">
+                    <div
+                        className='w-[50%] flex justify-center'
                     >
-                    <FormModalLogin />
+                        <FormModalLogin/>
                     </div>
                 </div>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     )
 }
