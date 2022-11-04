@@ -37,13 +37,15 @@ const ModalAddComments = ({ book }) => {
     }
   }
   return (
-    <div className='flex flex-col justify-center items-center mx-auto'>
+    <div className='flex flex-col justify-center items-center mx-auto text-center'>
+      <h1 className='font-bold text-xl'>Lascia un commento</h1>
+      <h2 className='text-sm mt-2 mb-4'>per: {book.title}</h2>
       <form 
-      className='flex flex-col'
+      className='flex flex-col justify-center items-center mt-4'
       onSubmit={postComment}>
         <div className='flex flex-col mx-auto'>
         <input
-          className='mb-2 p-2 w-fit '
+          className='mb-2 p-2 rounded'
           type="text"
           placeholder='Insert your comment'
           onChange={(e) =>
@@ -51,7 +53,7 @@ const ModalAddComments = ({ book }) => {
           }
         />
         <select
-          className='mb-2 p-2 w-fit'
+          className='mb-2 p-2 rounded w-full'
           onChange={(e) =>
             setFormValue({ ...formValue, rate: e.target.value })
 
@@ -78,7 +80,7 @@ const ModalAddComments = ({ book }) => {
         </div>
         <div>
         <button
-          className='rounded-xl bg-purple-500 text-sm text-white w-[100px] '
+          className='rounded p-2 bg-[#b2d2cd] hover:bg-[#95b2ad] text-sm uppercase text-white w-full mt-4'
           type='submit'
           onChange={(e) =>
             setFormValue({ ...formValue, add: e.target.value })

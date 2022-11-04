@@ -23,15 +23,15 @@ const FormModalLogin = () => {
    }
     return (
     <>
-            <div className="container m-auto flex flex-col justify-center ml-16">
-                <div className='mt-20 text-white text-xl font-bold p-4  w-fit'>
+            <div className="container  flex flex-col justify-center ">
+                <div className=' text-xl font-bold p-4  w-fit'>
                     <h1>
                         Please login to your account
                     </h1>
                 </div>
-                <div className='flex flex-col w-fit p-4 '>
+                <div className='flex flex-col ml-10 w-fit p-4 '>
                 <input
-                        className="p-2 rounded-lg mb-8"
+                        className="p-2 rounded-lg mb-8 border"
                         type="text"
                         placeholder="userName"
                         onChange={(e) =>
@@ -42,7 +42,7 @@ const FormModalLogin = () => {
                         }
                     ></input>
                     <input
-                        className="p-2 rounded-lg mb-8"
+                        className="p-2 rounded-lg mb-8 border"
                         type="email"
                         placeholder="e-mail"
                         onChange={(e) =>
@@ -54,7 +54,7 @@ const FormModalLogin = () => {
                     ></input>
                 
                     <input
-                        className="p-2 rounded-lg mb-4"
+                        className="p-2 rounded-lg mb-4 border"
                         type="password"
                         placeholder="password"
                         onChange={(e) =>
@@ -66,11 +66,24 @@ const FormModalLogin = () => {
                     ></input>
                 </div>
                 <button
-                    className="transition w-fit ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-purple-200 p-2 ml-4 rounded-lg mb-2 bg-purple-100 "
+                    className="transition w-fit ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-purple-200 p-2 ml-12 rounded-lg mb-2 bg-purple-100 "
                     onClick={() =>saveUserToDb() }
                 >
                     Save
                 </button>
+                <div className=' flex  flex-col justify-center w-fit mt-8 ml-10'>
+                    <div
+                    className='flex  justify-center'
+                    >
+                    <h1 
+                    className='text-xl font-bold mb-4'>
+                        Sign In
+                    </h1>
+                    </div>
+                    <p
+                    className='text-xs'
+                    >Non hai ancora un account? Registrati</p>
+                </div>
             </div>
             </>
     )

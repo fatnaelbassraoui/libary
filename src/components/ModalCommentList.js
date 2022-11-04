@@ -1,6 +1,9 @@
 import React from 'react'
 import useFetch from '../Hooks/useFetch'
 import LoadingIndicator from './LoadingIndicator'
+import ForumIcon from '@mui/icons-material/Forum';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import PersonIcon from '@mui/icons-material/Person';
 
 const ModalCommentList = ({ book }) => {
 
@@ -13,15 +16,27 @@ const ModalCommentList = ({ book }) => {
       {data && !error && data.map((comment, index) => {
         console.log(comment);
         return (
-          <div key={index} className='flex flex-col '>
-            <div>
-              {comment.authur}
+          <div key={index} className='flex shadow-sm flex-col bg-white p-2 rounded-lg gap-2 mb-2'>
+            <div className="font-bold italic">
+              <PersonIcon style={{
+                color: '#b2d2cd',
+                marginRight: '.5rem'
+              }} />
+              {comment.author}
             </div>
             <div>
+              <ForumIcon style={{
+                color: '#b2d2cd',
+                marginRight: '.5rem'
+              }} />
               {comment.comment}
             </div>
-            <div>
-              {comment.createdAt.slice(0, 24)}
+            <div className="font-bold">
+              <CalendarMonthIcon style={{
+                color: '#b2d2cd',
+                marginRight: '.5rem'
+              }} />
+              {comment.createdAt.slice(0,10)}
             </div>
           </div>
         )
