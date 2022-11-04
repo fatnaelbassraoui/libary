@@ -1,5 +1,5 @@
 import React from 'react'
-import heroImage from '../Assets/hero.img.jfif'
+import heroImage from '../Assets/herobg.png'
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
         backgroundImage: `url("${heroImage}")`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
+        backgroundPosition: 'right 10% bottom 0%'
       }}>
       <div>
         <h1
