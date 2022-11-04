@@ -17,7 +17,7 @@ const SingleBook = ({ book }) => {
       backgroundPosition:'center'
 
     }}
-    className='flex flex-col justify-center w-[200px] h-[300px]  border rounded-xl relative shadow-md cursor-pointer'>
+    className=' flex flex-col justify-center w-[200px] h-[300px]  border rounded-xl relative shadow-md cursor-pointer'>
       <div
         onClick={() => toggleCard()}
         className={selectedCard ? ' drop-shadow-2xl hue-rotate-15' : 'border-stone-200'}>
